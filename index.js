@@ -1,6 +1,7 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
+const generateMarkdown = require('./utils/generateMarkdown');
 
 // TODO: Create an array of questions for user input
 const questions = () => {
@@ -58,28 +59,21 @@ const questions = () => {
             }
         },
         {
-            type: 'checkbox',
+            type: 'list',
             name: 'license',
             message: 'What is the license for your application? (Required)',
-            choices: ['Public Domain', 'Permissive', 'LGPL', 'Copyleft', 'Proprietary'],
-            validate: licenseInput => {
-                if (licenseInput) {
-                    return true;
-                } else {
-                    console.log('Please enter licensing information!');
-                    return false;
-                }
-            }
+            choices: ['Apache 2.0', 'MIT', 'LGPL', 'Copyleft', 'None'],
+            default: 'None'
         },
         {
             type: 'input',
             name: 'contributing',
-            message: '???',
+            message: 'What are the contributing guidelines for this project?',
         },
         {
             type: 'input',
             name: 'tests',
-            message: '???',
+            message: 'Provide instructions on how to test this application.',
         },
         {
             type: 'input',
@@ -110,13 +104,11 @@ const questions = () => {
     ])
 };
 
-questions().then(answers => console.log(answers));
-
-// TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
-
-// TODO: Create a function to initialize app
-function init() {}
-
-// Function call to initialize app
-init();
+questions().then(answers => {
+    fs.writeFile('./README.md', generateMarkdown(answers), err => {
+        if (err) {
+            console.log(err)
+          return;
+        }
+      });
+})
