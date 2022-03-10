@@ -44,7 +44,7 @@ function renderLicenseLink(license) {
     case 'Mozilla':
       return `
 ## License
-<a href="https://opensource.org/licenses/MPL-2.0">Notice: this application is covered under a Mozzila license</a>
+<a href="https://opensource.org/licenses/MPL-2.0">Notice: this application is covered under a Mozilla license</a>
 `;
 
     case 'None':
