@@ -67,7 +67,7 @@ ${data.installation}
 ${data.usage}
 
 ## License
-${data.license}
+${renderLicenseLink(data.license)}
 ${data.contributing&&`
 ## Contributing
 ${data.contributing}
