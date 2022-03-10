@@ -2,6 +2,7 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 const generateMarkdown = require('./utils/generateMarkdown');
+const { resolve } = require('path');
 
 // TODO: Create an array of questions for user input
 const questions = () => {
@@ -81,7 +82,7 @@ const questions = () => {
         {
             type: 'input',
             name: 'tests',
-            message: 'Provide instructions on how to test this application.',
+            message: 'Provide instructions on how to test this application (Required).',
             validate: testInput => {
                 if (testInput) {
                     return true;
@@ -126,5 +127,6 @@ questions().then(answers => {
             console.log(err)
           return;
         }
+        console.log('README.md file succesfully created!')
       });
 })
