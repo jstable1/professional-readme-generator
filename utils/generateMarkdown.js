@@ -26,64 +26,33 @@ function renderLicenseLink(license) {
     case 'Apache 2.0':
       return `
 ## License
-<a href="https://opensource.org/licenses/Apache-2.0">Notice: this application is covered under an Apache 2.0 license</a>
-`;
+<a href="https://opensource.org/licenses/Apache-2.0">Notice: this application is covered under an Apache 2.0 license</a>`;
 
     case 'MIT':
       return `
 ## License
-<a href="https://opensource.org/licenses/MIT">Notice: this application is covered under a MIT license</a>
-`;
+<a href="https://opensource.org/licenses/MIT">Notice: this application is covered under a MIT license</a>`;
     
     case 'Unlicense':
       return `
 ## License
-<a href="https://unlicense.org/">Notice: this application is covered under a Unlicense</a>
-`;
+<a href="https://unlicense.org/">Notice: this application is covered under a Unlicense</a>`;
     
     case 'Mozilla':
       return `
 ## License
-<a href="https://opensource.org/licenses/MPL-2.0">Notice: this application is covered under a Mozilla license</a>
-`;
+<a href="https://opensource.org/licenses/MPL-2.0">Notice: this application is covered under a Mozilla license</a>`;
 
     case 'None':
       return "";
   }
 }
 
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
-// function renderLicenseSection(license) {
-//   switch (license) {
-//     case 'Apache 2.0':
-//       return `
-//       ## License
-//       ${renderLicenseLink(data.license)}
-//       `;
-
-//     case 'MIT':
-//       return `
-//       ## License
-//       ${renderLicenseLink(data.license)}
-//       `;
-    
-//     case 'Unlicense':
-//       return `
-//       ## License
-//       ${renderLicenseLink(data.license)}
-//       `;
-    
-//     case 'Mozilla':
-//       return `
-//       ## License
-//       ${renderLicenseLink(data.license)}
-//       `;
-
-//     case 'None':
-//       return "";
-//   }
-// }
+function renderLicenseTOCSection(licenseTOC) {
+  return licenseTOC === 'None'
+  ? ''
+  : '* [License](#license)';
+}
 
 // TODO: Create a function to generate markdown for README
 
@@ -94,7 +63,7 @@ ${renderLicenseBadge(data.license)}
 * [Description](#description)
 * [Installation](#installation)
 * [Usage](#usage)
-* [License](#license)
+${renderLicenseTOCSection(data.license)}
 * [Contributing](#contributing)
 * [Tests](#tests)
 * [Questions](#questions)
