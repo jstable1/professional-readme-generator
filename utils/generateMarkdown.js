@@ -26,25 +26,25 @@ function renderLicenseLink(license) {
     case 'Apache 2.0':
       return `
 ## License
-<a Notice: this application is covered under an href="https://opensource.org/licenses/Apache-2.0">Apache 2.0 license</a>
+<a href="https://opensource.org/licenses/Apache-2.0">Notice: this application is covered under an Apache 2.0 license</a>
 `;
 
     case 'MIT':
       return `
 ## License
-<a href="https://opensource.org/licenses/MIT">MIT</a>
+<a href="https://opensource.org/licenses/MIT">Notice: this application is covered under a MIT license</a>
 `;
     
     case 'Unlicense':
       return `
 ## License
-<a href="https://unlicense.org/">Unlicense</a>
+<a href="https://unlicense.org/">Notice: this application is covered under a Unlicense</a>
 `;
     
     case 'Mozilla':
       return `
 ## License
-<a href="https://opensource.org/licenses/MPL-2.0">Mozzila</a>
+<a href="https://opensource.org/licenses/MPL-2.0">Notice: this application is covered under a Mozzila license</a>
 `;
 
     case 'None':
@@ -97,7 +97,7 @@ ${renderLicenseBadge(data.license)}
 * [License](#license)
 * [Contributing](#contributing)
 * [Tests](#tests)
-* [Questions](#github #email)
+* [Questions](#questions)
 
 ## Description
 ${data.description}
@@ -116,7 +116,7 @@ ${data.contributing}
 ${data.tests}
 
 ## Questions
-<a href="mailto:${data.email}"> Click here to email me!</a>
+<a href="mailto:${data.email}"> Click here to email me if you have any questions!</a>
 <br>
 <a href="https://github.com/${data.github}">GitHub</a>
 `;
