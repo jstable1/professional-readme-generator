@@ -62,18 +62,34 @@ const questions = () => {
             type: 'list',
             name: 'license',
             message: 'What is the license for your application? (Required)',
-            choices: ['Apache 2.0', 'MIT', 'LGPL', 'Copyleft', 'None'],
-            default: 'None'
+            choices: ['Apache 2.0', 'MIT', 'Unlicense', 'Mozilla', 'None'],
+            default: 'None',
+            validate: licenseInput => {
+                if (licenseInput) {
+                    return true;
+                } else {
+                    console.log('Please enter license information for your project!');
+                    return false;
+                }
+            }
         },
         {
             type: 'input',
             name: 'contributing',
-            message: 'What are the contributing guidelines for this project?',
+            message: 'If you created an application or package and would like other developers to contribute it, please provide guidelines for how to do so.',
         },
         {
             type: 'input',
             name: 'tests',
             message: 'Provide instructions on how to test this application.',
+            validate: testInput => {
+                if (testInput) {
+                    return true;
+                } else {
+                    console.log('Please provide instructions on how to test this application!');
+                    return false;
+                }
+            }
         },
         {
             type: 'input',
