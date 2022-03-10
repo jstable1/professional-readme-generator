@@ -1,4 +1,4 @@
-# lkjljkea
+# lklkjea
 [![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)
 ## Table of Contents
 * [Description](#description)
@@ -7,18 +7,24 @@
 * [License](#license)
 * [Contributing](#contributing)
 * [Tests](#tests)
+* [Questions] (#github #email)
 
 ## Description
-ljlkjlea
+ljkljea
 
 ## Installation
-jljlkjea
+lkjlkjea
 
 ## Usage
-ljlkjea
+lkjlkjea
 
 ## License
 <a href="https://opensource.org/licenses/MPL-2.0">Mozzila</a>
 
+
 ## Tests
-lkjljea
+lkjlkea
+
+## Questions
+<a href="mailto:jessica.stabler@gmail.com"> Click here to email me at jessica.stabler@gmail.com</a>
+<a href="https://github.com/jstable1">GitHub</a>

@@ -24,16 +24,28 @@ function renderLicenseBadge(license) {
 function renderLicenseLink(license) {
   switch (license) {
     case 'Apache 2.0':
-      return `<a href="https://opensource.org/licenses/Apache-2.0">Apache 2.0</a>`;
+      return `
+## License
+<a href="https://opensource.org/licenses/Apache-2.0">Apache 2.0</a>
+`;
 
     case 'MIT':
-      return `<a href="https://opensource.org/licenses/MIT">MIT</a>`;
+      return `
+## License
+<a href="https://opensource.org/licenses/MIT">MIT</a>
+`;
     
     case 'Unlicense':
-      return `<a href="https://unlicense.org/">Unlicense</a>`;
+      return `
+## License
+<a href="https://unlicense.org/">Unlicense</a>
+`;
     
     case 'Mozilla':
-      return `<a href="https://opensource.org/licenses/MPL-2.0">Mozzila</a>`;
+      return `
+## License
+<a href="https://opensource.org/licenses/MPL-2.0">Mozzila</a>
+`;
 
     case 'None':
       return "";
@@ -42,7 +54,36 @@ function renderLicenseLink(license) {
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
-function renderLicenseSection(license) {}
+// function renderLicenseSection(license) {
+//   switch (license) {
+//     case 'Apache 2.0':
+//       return `
+//       ## License
+//       ${renderLicenseLink(data.license)}
+//       `;
+
+//     case 'MIT':
+//       return `
+//       ## License
+//       ${renderLicenseLink(data.license)}
+//       `;
+    
+//     case 'Unlicense':
+//       return `
+//       ## License
+//       ${renderLicenseLink(data.license)}
+//       `;
+    
+//     case 'Mozilla':
+//       return `
+//       ## License
+//       ${renderLicenseLink(data.license)}
+//       `;
+
+//     case 'None':
+//       return "";
+//   }
+// }
 
 // TODO: Create a function to generate markdown for README
 
@@ -56,6 +97,7 @@ ${renderLicenseBadge(data.license)}
 * [License](#license)
 * [Contributing](#contributing)
 * [Tests](#tests)
+* [Questions] (#github #email)
 
 ## Description
 ${data.description}
@@ -65,8 +107,6 @@ ${data.installation}
 
 ## Usage
 ${data.usage}
-
-## License
 ${renderLicenseLink(data.license)}
 ${data.contributing&&`
 ## Contributing
@@ -74,6 +114,10 @@ ${data.contributing}
 `}
 ## Tests
 ${data.tests}
+
+## Questions
+<a href="mailto:${data.email}"> Click here to email me at ${data.email}</a>
+<a href="https://github.com/${data.github}">GitHub</a>
 `;
 }
 
