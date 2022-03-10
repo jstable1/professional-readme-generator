@@ -116,7 +116,8 @@ ${data.contributing}
 ${data.tests}
 
 ## Questions
-<a href="mailto:${data.email}"> Click here to email me at ${data.email}</a>
+<a href="mailto:${data.email}"> Click here to email me!</a>
+<br>
 <a href="https://github.com/${data.github}">GitHub</a>
 `;
 }
