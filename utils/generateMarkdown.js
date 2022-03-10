@@ -26,7 +26,7 @@ function renderLicenseLink(license) {
     case 'Apache 2.0':
       return `
 ## License
-<a href="https://opensource.org/licenses/Apache-2.0">Apache 2.0</a>
+<a Notice: this application is covered under an href="https://opensource.org/licenses/Apache-2.0">Apache 2.0 license</a>
 `;
 
     case 'MIT':
@@ -97,7 +97,7 @@ ${renderLicenseBadge(data.license)}
 * [License](#license)
 * [Contributing](#contributing)
 * [Tests](#tests)
-* [Questions] (#github #email)
+* [Questions](#github #email)
 
 ## Description
 ${data.description}
