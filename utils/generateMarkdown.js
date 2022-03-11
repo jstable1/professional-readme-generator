@@ -19,7 +19,7 @@ function renderLicenseBadge(license) {
   }
 }
 
-// TODO: Create a function that returns the license link
+// TODO: Create a function that returns the license link and section
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
   switch (license) {
@@ -48,10 +48,24 @@ function renderLicenseLink(license) {
   }
 }
 
-function renderLicenseTOCSection(licenseTOC) {
-  return licenseTOC === 'None'
-  ? ''
-  : '* [License](#license)';
+// function to make the license and contributing TOCs options appear dynamically
+
+function renderLicenseTOCSection(license) {
+  if (license === 'None'){
+    return
+  } else {
+    `
+    * [License](#license)`;
+  }
+}
+
+function renderContributingTOCSection(license) {
+  if (license === null){
+    return
+  } else {
+    `
+    * [Contributing](#contributing)`;
+  }
 }
 
 // TODO: Create a function to generate markdown for README
@@ -62,9 +76,7 @@ ${renderLicenseBadge(data.license)}
 ## Table of Contents
 * [Description](#description)
 * [Installation](#installation)
-* [Usage](#usage)
-${renderLicenseTOCSection(data.license)}
-* [Contributing](#contributing)
+* [Usage](#usage) ${renderLicenseTOCSection(data.license)} ${renderContributingTOCSection(data.contributing)}
 * [Tests](#tests)
 * [Questions](#questions)
 
