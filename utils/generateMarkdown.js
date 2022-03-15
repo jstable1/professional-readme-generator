@@ -25,21 +25,25 @@ function renderLicenseLink(license) {
   switch (license) {
     case 'Apache 2.0':
       return `
+
 ## License
 <a href="https://opensource.org/licenses/Apache-2.0">Notice: this application is covered under an Apache 2.0 license</a>`;
 
     case 'MIT':
       return `
+
 ## License
 <a href="https://opensource.org/licenses/MIT">Notice: this application is covered under a MIT license</a>`;
     
     case 'Unlicense':
       return `
+
 ## License
 <a href="https://unlicense.org/">Notice: this application is covered under a Unlicense</a>`;
     
     case 'Mozilla':
       return `
+
 ## License
 <a href="https://opensource.org/licenses/MPL-2.0">Notice: this application is covered under a Mozilla license</a>`;
 
@@ -52,19 +56,19 @@ function renderLicenseLink(license) {
 
 function renderLicenseTOCSection(license) {
   if (license === 'None'){
-    return
+    return "";
   } else {
-    `
-    * [License](#license)`;
+  return `
+* [License](#license)`;
   }
 }
 
-function renderContributingTOCSection(license) {
-  if (license === null){
-    return
+function renderContributingTOCSection(contributing) {
+  if (contributing === ''){
+    return "";
   } else {
-    `
-    * [Contributing](#contributing)`;
+  return `
+* [Contributing](#contributing)`;
   }
 }
 
@@ -87,8 +91,7 @@ ${data.description}
 ${data.installation}
 
 ## Usage
-${data.usage}
-${renderLicenseLink(data.license)}
+${data.usage}${renderLicenseLink(data.license)}
 ${data.contributing&&`
 ## Contributing
 ${data.contributing}
