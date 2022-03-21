@@ -16,7 +16,7 @@ This is an application that allows developers to quickly create a high-quality p
 Open the terminal when you are in the application then type npm install to install the inquirer dependencies.
 
 ## Usage
-type node index.js in the terminal and follow the question prompts to create a professional readme.md 
+type node index.js in the terminal and follow the question prompts to create a professional readme.md. Here is an instructional video on how to use the application:  https://drive.google.com/file/d/1TCyjVr0_6pO_IgGJb8jCiVPioksG9gql/view.
 
 ## License
 <a href="https://unlicense.org/">Notice: this application is covered under a Unlicense</a>
